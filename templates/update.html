@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+
+{% block body %}
+<h1> UPDATE RECORD </h1>
+
+<form method="Post" >
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" name="" value="update record">
+</form>
+
+{% endblock body %}

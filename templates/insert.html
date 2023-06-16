@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+
+{% block body %}
+<h1> Please insert the record here </h1>
+
+<form method="Post" action=/insert/>
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" name="" value="insert record">
+</form>
+
+{% endblock body %}

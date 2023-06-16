@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block body %}
+<div class="card">
+    <div class="card-header">
+       Details
+    </div>
+    <div class="card-body">
+      <h1 class="card-title"> Name :  {{customer_record.name}} </h1>
+      <h1> Mobile Number :{{customer_record.mobile_no}} </h1>
+<h1> Email id: {{customer_record.email}} </h1>
+<h1> Address: {{customer_record.address}} </h1>
+  <a href="/data "class="btn btn-primary " >Back </a>  
+  <a href="/delete/{{customer_record.id}} "class="btn btn-danger " >Delete </a>
+  <a href="/update/{{customer_record.id}}"class="btn btn-primary " >Update </a>
+  
+  </div>
+
+
+
+
+
+    
+{% endblock body %}
+    

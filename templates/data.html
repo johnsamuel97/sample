@@ -1,0 +1,35 @@
+{% extends 'home.html' %}
+{% block body %}
+
+
+
+<h1>Welcome! You can access data now.</h1>
+
+{% if record %}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Mobile Number</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>id</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for rec in record %}
+    <tr>
+      <td>{{ rec.name }}</td>
+      <td>{{ rec.mobile_no }}</td>
+      <td>{{ rec.email }}</td>
+      <td>{{ rec.address }}</td>
+      <td><a href="/record/{{rec.id}}">{{ rec.id }}</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a href="/insert "class="btn btn-danger " >insert Record</a>
+    </div>
+{% endif %}
+
+{% endblock %}

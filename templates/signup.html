@@ -1,0 +1,11 @@
+{% extends 'home.html' %}
+
+{% block body %}
+    <form method="POST"> 
+    {{form.as_p}}
+   
+    {% csrf_token %}
+    <input type= "submit" class="btn btn primary">
+    </form>
+
+{% endblock body %}
